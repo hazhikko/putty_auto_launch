@@ -1,0 +1,21 @@
+div {
+    margin: 5px;
+}
+input {
+    /* 日本語をOFF(chromeだと効かない) */
+    ime-mode:disabled;
+}
+
+table, td, th {
+    border: 2px #000000 solid;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 5px;
+}
+
+table tr:first-child td {
+    text-align: center;
+    font-weight: bold;
+}

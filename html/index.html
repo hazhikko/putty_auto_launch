@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+
+  <title>PuTTY自動起動ツール</title>
+  <link rel="stylesheet" href="../css/styles.css?v=1.0">
+
+</head>
+
+<body>
+    <div id="import">
+        <div>
+            <textarea id="importTableArea" rows="20" cols="80" placeholder="取り込むテーブルタグ"></textarea>
+        </div>
+        <div>
+            <input id="importTableButton" type="button" value="テーブル読み込み">
+        </div>
+    </div>
+    <div id="putty">
+      <div>
+        <form>
+          <input id="userId" type="text" placeholder="ユーザーID">
+          <input id="userPassword" type="text" placeholder="ユーザーパスワード">
+          <input id="puttyPath" type="text" placeholder="Putty.exeの場所" value="">
+          <input id="puttyKey" type="text" placeholder="PPKの場所" value="">
+          <input id="launchButton" type="button" value="Puttyを起動">
+        </form>
+      </div>
+    </div>
+    <div id="servers">
+      <div>
+        <select id="groupSelect"></select>
+        <option></option>
+      </div>
+      <div id="serversTable">
+      </div>
+    </div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
