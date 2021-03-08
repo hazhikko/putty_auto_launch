@@ -208,11 +208,16 @@ function launchPutty(userId, userPassword, puttyPath, puttyKey) {
 /**
  * 要素に値が入っているかチェックする
  * @param {string} selector チェック対象のselector
- * @returns プログラム終了用
  */
 function checkTextEmpty(selector) {
-    if (!$(selector).val()) {
-        alert($(selector).prop('placeholder') + 'が未入力です');
-        return;
+    try {
+        if (!$(selector).val()) {
+            alert($(selector).prop('placeholder') + 'が未入力です');
+            // IEの場合、これだけだとなぜか止まらない
+            throw new Error($(selector).prop('placeholder') + 'が未入力です');
+        }
+    } catch(e) {
+        // こっちでも例外投げる
+        throw new Error(e.message);
     }
 }
